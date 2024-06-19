@@ -1,4 +1,4 @@
-package Hotel;
+package com.alxndrestvs.hotel;
 
 import jakarta.transaction.Transactional;
 import jakarta.ws.rs.*;
@@ -19,6 +19,12 @@ public class HotelResource {
     @Path("findById")
     public Hotel findById(@QueryParam("id") long id) {
         return Hotel.findById(id);
+    }
+
+    @GET
+    @Path("findByTravelOrderId")
+    public Hotel findByTravelOrderId(@QueryParam("travelOrderId") long travelOrderId) {
+        return Hotel.findByTravelOrderId(travelOrderId);
     }
 
     @Transactional

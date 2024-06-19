@@ -1,9 +1,5 @@
-package flight;
+package com.alxndrestvs.flight;
 
-import com.alxndrestvs.travelorder.TravelOrder;
-import io.quarkus.hibernate.orm.panache.Panache;
-import io.quarkus.hibernate.orm.panache.PanacheEntity;
-import jakarta.persistence.Entity;
 import jakarta.transaction.Transactional;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
@@ -23,6 +19,12 @@ public class FlightResource {
     @Path("findById")
     public Flight findById(@QueryParam("id") long id) {
         return Flight.findById(id);
+    }
+
+    @GET
+    @Path("findByTravelOrderId")
+    public Flight findByTravelOrderId(@QueryParam("travelOrderId") long travelOrderId) {
+        return Flight.findByTravelOrderId(travelOrderId);
     }
 
     @Transactional
