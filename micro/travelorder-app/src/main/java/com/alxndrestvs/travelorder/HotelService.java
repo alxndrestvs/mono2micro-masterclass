@@ -7,7 +7,7 @@ import org.eclipse.microprofile.rest.client.inject.RegisterRestClient;
 
 import java.util.List;
 
-@RegisterRestClient(baseUri = "https://localhost:8082/hotel")
+@RegisterRestClient(baseUri = "http://localhost:8082/hotel")
 public interface HotelService {
 
 //    @GET
