@@ -24,6 +24,7 @@ public class HotelResource {
     @GET
     @Path("findByTravelOrderId")
     public Hotel findByTravelOrderId(@QueryParam("travelOrderId") long travelOrderId) {
+//        Thread.sleep(3000);
         return Hotel.findByTravelOrderId(travelOrderId);
     }
 
